@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo's Vintage Coffee Bar | Accrington's Finest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6A0DAD; /* Deep Purple */
+            --secondary-color: #1E1E2F; /* Dark Blue */
+            --accent-color: #8A2BE2; /* Bright Blue-Purple */
+            --dark-color: #0D0D1A; /* Dark Navy */
+            --text-light: #E0D4F7; /* Soft Lavender */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://imgur.com/a/OhwXM9J');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(30, 30, 47, 0.9);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .menu-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: var(--dark-color);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        .menu-item {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .about-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .contact-section {
+            padding: 5rem 2rem;
+            background: var(--dark-color);
+            text-align: center;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav a {
+                margin: 0.5rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Visit Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="header" id="home">
+        <div class="hero-content">
+            <h1>Jo's Vintage Coffee Bar</h1>
+            <p>The Best In Town</p>
+            <button class="btn">View Our Prices</button>
+        </div>
+    </header>
+
+    <section class="menu-section" id="menu">
+        <h2>Our Vintage Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="Coffee">
+                <h3>How We Offer Better Prices</h3>
+                <p>Enjoy better quality coffee for less! Support local businesses while sipping your favorite cup.</p>
+                <p>Starting at £3.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>Our Story</h2>
+        <p>Jo's Vintage Coffee Bar Started out late decemeber, Our coffee is locally sourced from Blackburn. Quality coffee for less! </p>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Visit Our Shop</h2>
+        <p>Unit 7 Accrington Arndale</p>
+        <p>Open Daily: 9AM - 4PM</p>
+        <p>+44 7535851985</p>
+        <p>info@josvintagecoffeebar.uk</p>
+    </section>
+
+    <footer>
+        <p>Follow Our Journey</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/15s8NSQ4b3/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/josbvintagecoffeebaruk"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
